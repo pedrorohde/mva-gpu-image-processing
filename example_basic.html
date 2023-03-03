@@ -22,7 +22,7 @@
 
 <!-- Fragment shader example. -->
 <script  id="fragmentShaderExample" type="x-shader/x-fragment">
-  precision highp float;
+  precision highp float; // all floating point values should be high precision
 
   // input image texture
   uniform sampler2D inputImage;
@@ -30,6 +30,7 @@
   // texture coordinates corresponding to the current output pixel position
   varying vec2 texCoord;
 
+  // function executed per pixel
   void main() {
     // sample the input image
     vec4 color = texture2D(inputImage, texCoord);
